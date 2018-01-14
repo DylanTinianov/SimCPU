@@ -34,6 +34,20 @@ void SimCPU::set_register_value(int reg_num, unsigned int value) {
     }
 }
 
+void SimCPU::print_register_values() {
+    for (int reg_num=0; reg_num < NUM_REGISTERS; reg_num++) {
+        std::cout << "$" << reg_num;
+        if (reg_num < 10) {
+            std::cout << " ";
+        }
+        std::cout << " : " <<  registers[reg_num] << "    ";
+        if ((reg_num + 1) % 4 == 0) {
+            std::cout << std::endl;
+        }
+    }
+    std::cout << std::endl;
+}
+
 unsigned int SimCPU::get_register_value(int reg_num) {
     return registers[reg_num];
 }

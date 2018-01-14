@@ -7,7 +7,7 @@
 
 #include <exception>
 
-enum InstructionType = {TYPE1, TYPE2};
+//enum InstructionType = {TYPE1, TYPE2};
 
 union Instruction {
     unsigned int instr;
